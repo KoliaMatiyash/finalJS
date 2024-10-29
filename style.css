@@ -38,6 +38,10 @@ body {
   display: flex;
   gap: 10px;
 }
+.prev {
+  direction: rtl;
+  unicode-bidi: bidi-override;
+}
 .prev,
 .next {
   border: none;
@@ -72,7 +76,7 @@ body {
   border-radius: 15px;
 }
 .event_day {
-  background-color: #ff5a5a; /* Highlighted day */
+  background-color: #ff5a5a;
   color: white;
 }
 .event_content {
