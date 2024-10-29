@@ -1,0 +1,129 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.all_calendar {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-self: center;
+  align-self: center;
+  justify-content: space-between;
+  width: 700px;
+  height: 460px;
+  border-radius: 15px;
+  background-color: rgb(250, 250, 250);
+  margin-top: 100px;
+  box-shadow: 10px 10px 50px -15px rgba(0, 0, 0, 0.57);
+  cursor: default;
+}
+.calendar {
+  width: 370px;
+  padding: 15px;
+  border-right: 2px solid #ff5a5a;
+  border-radius: 15px;
+}
+.calendar_head {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid gray;
+  padding-bottom: 10px;
+}
+.title_text {
+  font-size: 25px;
+}
+.btns {
+  text-align: end;
+  display: flex;
+  gap: 10px;
+}
+.prev,
+.next {
+  border: none;
+  border-radius: 15px;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  background-color: #ff5a5a;
+  color: white;
+  cursor: pointer;
+}
+.calendar_days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+  width: 300px;
+  padding-top: 10px;
+}
+.day_name,
+.day {
+  text-align: center;
+  padding: 10px;
+  font-family: Arial, sans-serif;
+}
+.day {
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.evnents {
+  width: 300px;
+  border-radius: 15px;
+}
+.event_day {
+  background-color: #ff5a5a; /* Highlighted day */
+  color: white;
+}
+.event_content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.close_events {
+  align-self: flex-end;
+  border: none;
+  background-color: rgb(250, 250, 250);
+  cursor: pointer;
+}
+.event_tittle {
+  font-size: 25px;
+  text-align: center;
+}
+.event_from {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-self: flex-end;
+}
+.save_btn {
+  border: none;
+  background-color: #ff5a5a;
+  border-radius: 15px;
+  width: 100px;
+  color: white;
+  font-size: 16px;
+  padding: 5px;
+  align-self: flex-end;
+  margin-top: 10px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+.close_events {
+  margin-top: 10px;
+  margin-right: 10px;
+}
+.change,
+.delete {
+  border: none;
+  background-color: rgb(237, 237, 237);
+  border-radius: 5px;
+  font-size: 15px;
+  cursor: pointer;
+}
+.visible {
+  display: block;
+}
+.unvisible {
+  display: none;
+}
