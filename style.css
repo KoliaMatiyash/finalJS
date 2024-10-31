@@ -136,3 +136,6 @@ body {
 .no_border {
   border: none;
 }
+.event_botder {
+  border: 1px solid #ff5a5a;
+}

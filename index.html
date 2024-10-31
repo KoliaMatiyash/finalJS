@@ -8,7 +8,7 @@
   </head>
   <body>
     <section class="all_calendar">
-      <div class="calendar">
+      <div class="calendar no_border" id="calendar">
         <div class="calendar_head">
           <p class="title_text" id="titleTxt">April 2024</p>
           <div class="btns">
@@ -17,7 +17,7 @@
           </div>
         </div>
         <div class="calendar_days" id="calendarDays">
-          <div class="day_name">Mo</div>
+          <!-- <div class="day_name">Mo</div>
           <div class="day_name">Tu</div>
           <div class="day_name">We</div>
           <div class="day_name">Th</div>
@@ -64,30 +64,32 @@
           <div class="day">27</div>
           <div class="day">28</div>
           <div class="day">29</div>
-          <div class="day">30</div>
+          <div class="day">30</div> -->
         </div>
       </div>
-      <div class="evnents">
+      <div class="evnents unvisible" id="eventWindow">
         <div class="event_content">
           <button id="closeModel" class="close_events">❌</button>
           <div class="event_info">
             <p class="event_tittle">Add Event</p>
             <ul class="event_list" id="eventList">
-              <li>
+              <!-- <li>
                 party <button class="change">✏️</button>
                 <button class="delete">🗑️</button>
-              </li>
+              </li> -->
             </ul>
           </div>
           <form id="eventForm" class="event_from">
             <label for="">Name of the event</label>
             <br />
-            <input type="text" name="nameEvent" id="nameEvent" />
-            <button id="saveEvent" class="save_btn">Save event</button>
+            <input type="text" name="nameEvent" id="nameEvent" required />
+            <button type="submit" id="saveEvent" class="save_btn">
+              Save event
+            </button>
           </form>
         </div>
       </div>
     </section>
-    <!-- <script src="./app.js"></script> -->
+    <script src="./app.js"></script>
   </body>
 </html>
