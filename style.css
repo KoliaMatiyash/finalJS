@@ -9,7 +9,7 @@ body {
   align-self: center;
   justify-content: space-between;
   /* width: 700px; */
-  height: 460px;
+  height: auto;
   border-radius: 15px;
   background-color: rgb(250, 250, 250);
   margin-top: 100px;

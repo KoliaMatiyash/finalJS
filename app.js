@@ -52,7 +52,7 @@ function creatCalendar() {
     const day = document.createElement("div");
     day.classList.add("day");
     day.textContent = i;
-    if (i === todayDay && todayMonth && todayYear) {
+    if (i === todayDay) {
       day.classList.add("event_day");
     }
     // const eventDay = `${i}-${todayMonth + 1}-${todayYear}`;
@@ -88,17 +88,47 @@ function addEvent() {
   listElement.textContent = eventInput.value.trim();
   eventInput.value = "";
   const deletBtn = document.createElement("button");
-  deletBtn.setAttribute("id", "deleteEvent");
+  deletBtn.classList.add("delete");
   deletBtn.textContent = "🗑️";
   listElement.appendChild(deletBtn);
-  const deleteLi = document.getElementById("deleteEvent");
-  deleteLi.addEventListener("click", (e) => {
-    e.preventDefault;
-    this.parentElement.remove();
+  deletBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    listElement.remove();
   });
+
+  return listElement;
 }
 eventForm.addEventListener("submit", (e) => {
-  e.preventDefault;
-  addEvent();
+  e.preventDefault();
+  const elementLi = addEvent();
+  eventList.appendChild(elementLi);
+});
+prevBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  if (todayMonth === 0) {
+    todayMonth = 11;
+  } else {
+    todayMonth -= 1;
+  }
+  if (todayMonth === 11) {
+    todayYear -= 1;
+  } else {
+    todayYear = todayYear;
+  }
+  creatCalendar();
+});
+nextBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  if (todayMonth === 11) {
+    todayMonth = 0;
+  } else {
+    todayMonth += 1;
+  }
+  if (todayMonth === 0) {
+    todayYear += 1;
+  } else {
+    todayYear = todayYear;
+  }
+  creatCalendar();
 });
 creatCalendar();
